@@ -1,7 +1,15 @@
 import { createApp } from 'vue'
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
 import App from './App.vue'
 import router from './router'
+import store from './store'
+import './styles/index.less'
 
-const Vue = createApp(App).use(router)
+const Vue = createApp(App)
+
+Vue.use(store)
+Vue.use(router)
+Vue.use(Antd)
 
 Vue.mount('#app')

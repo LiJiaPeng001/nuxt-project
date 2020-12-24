@@ -7,7 +7,7 @@ const routes = [
     meta: {
       title: '首页',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/index'),
+    component: () => import(/* webpackChunkName: "about" */ '@/views/index'),
   },
 ]
 
