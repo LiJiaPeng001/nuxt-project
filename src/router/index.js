@@ -9,6 +9,14 @@ const routes = [
     },
     component: () => import(/* webpackChunkName: "about" */ '@/views/index'),
   },
+  {
+    path: '/test',
+    name: 'test',
+    meta: {
+      title: '测试',
+    },
+    component: () => import(/* webpackChunkName: "about" */ '@/views/test/index.vue'),
+  },
 ]
 
 const router = createRouter({

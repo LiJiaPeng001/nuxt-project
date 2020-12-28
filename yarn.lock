@@ -839,6 +839,14 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+"@babel/runtime-corejs2@^7.10.2":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.12.5.tgz#382ec38f0826365e96118e28b81249c1c61bace3"
+  integrity sha512-kt5YpZ7F5A05LOgQuaMXXmcxakK/qttf5C/E1BJPA3Kf5PanbjPzDoXN+PIslUnjUxpuKblCsXyP0QfMiqyKqA==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.10.4", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.12.5.tgz?cache=0&sync_timestamp=1604443606981&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -2876,6 +2884,11 @@ core-js-compat@^3.6.5, core-js-compat@^3.8.0:
     browserslist "^4.15.0"
     semver "7.0.0"
 
+core-js@^2.6.5:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
 core-js@^3.6.5:
   version "3.8.1"
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.8.1.tgz?cache=0&sync_timestamp=1607215907966&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.8.1.tgz#f51523668ac8a294d1285c3b9db44025fda66d47"
@@ -3850,6 +3863,11 @@ execa@^3.3.0:
     p-finally "^2.0.0"
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
+
+exif-js@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/exif-js/-/exif-js-2.3.0.tgz#9d10819bf571f873813e7640241255ab9ce1a814"
+  integrity sha1-nRCBm/Vx+HOBPnZAJBJVq5zhqBQ=
 
 expand-brackets@^2.1.4:
   version "2.1.4"
@@ -7024,6 +7042,15 @@ q@^1.1.2:
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qiniu-js@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/qiniu-js/-/qiniu-js-3.1.2.tgz#b46e5e1ed806d757a81b542ac1342e04421d1d45"
+  integrity sha512-ZzSFNZXvhtbmvXvHlm8+umiKoGH+CxjuDPvl80sj1NzxLxvZ7SDn58jx65uXdOBhd+laNoqmKNBXCmw4QuQhuA==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.10.2"
+    exif-js "^2.3.0"
+    spark-md5 "^3.0.0"
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -7753,6 +7780,11 @@ sourcemap-codec@^1.4.4:
   version "1.4.8"
   resolved "https://registry.npm.taobao.org/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
+
+spark-md5@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/spark-md5/-/spark-md5-3.0.1.tgz#83a0e255734f2ab4e5c466e5a2cfc9ba2aa2124d"
+  integrity sha512-0tF3AGSD1ppQeuffsLDIOWlKUd3lS92tFxcsrh5Pe3ZphhnoK+oXIBTzOAThZCiuINZLvpiLH/1VS1/ANEJVig==
 
 spdx-correct@^3.0.0:
   version "3.1.1"
@@ -8547,11 +8579,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
-
-vue-cli-plugin-config@~0.3.7:
-  version "0.3.7"
-  resolved "https://registry.npm.taobao.org/vue-cli-plugin-config/download/vue-cli-plugin-config-0.3.7.tgz#834453c8d396b1606a40ce3a0033b6dd0a820cdc"
-  integrity sha1-g0RTyNOWsWBqQM46ADO23QqCDNw=
 
 vue-eslint-parser@^7.3.0:
   version "7.3.0"

@@ -27,45 +27,45 @@
           ></a-input-password>
         </a-form-model-item>
       </a-form-model>
-      <a-button type="primary" class="submit-btn" @click="onSubmit" size="large"
-        >登录</a-button
-      >
+      <a-button type="primary" class="submit-btn" @click="onSubmit" size="large">登录</a-button>
     </div>
   </my-dialog>
 </template>
 
 <script>
-import * as Api from "@/api/user";
+import myDialog from '../BaseDialog';
 
 export default {
+  components: {
+    myDialog,
+  },
   data() {
     return {
       visible: false,
-      callback: () => {},
       payload: {
-        userName: "lijiapeng",
-        password: "131452",
+        userName: 'lijiapeng',
+        password: '131452',
       },
       rules: {
         userName: [
           {
             required: true,
-            message: "请输入用户名",
+            message: '请输入用户名',
           },
           {
             pattern: /\w{6,8}/g,
-            message: "请输入长度6-8位的用户名，只可为数字和字母",
+            message: '请输入长度6-8位的用户名，只可为数字和字母',
           },
         ],
         password: [
           {
             required: true,
-            message: "请输入密码",
+            message: '请输入密码',
           },
           {
             min: 6,
             max: 18,
-            message: "请输入长度6-18位的密码，只可为数字和字母",
+            message: '请输入长度6-18位的密码，只可为数字和字母',
           },
         ],
       },
@@ -82,7 +82,7 @@ export default {
     onSubmit() {
       this.$refs.form.validate(async (err) => {
         if (!err) return;
-        await window.$nuxt.$store.dispatch("user/login", this.payload);
+        await window.$nuxt.$store.dispatch('user/login', this.payload);
         this.visible = false;
         this.resolve();
       });
