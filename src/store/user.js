@@ -1,8 +1,7 @@
 import authority from '@/utils/authority'
 import * as Api from '@/api/user'
-import { createStore } from 'vuex'
 
-export default createStore({
+export default {
   state: {
     user: authority.get(),
   },
@@ -26,4 +25,4 @@ export default createStore({
       location.reload()
     },
   },
-})
+}

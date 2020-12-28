@@ -10,6 +10,7 @@ export default () => {
       let view = document.createElement('div')
       view.class = 'login-container'
       instance = loginModal.mount(view)
+
       document.body.appendChild(instance.$el)
     }
     instance.resolve = resolve
