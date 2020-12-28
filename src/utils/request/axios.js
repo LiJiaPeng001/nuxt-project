@@ -28,8 +28,7 @@ export default async (
     if (status === 401) {
       return $login()
     }
-    if (process.server) console.error(info)
-    else message.error(info)
-    Promise.reject(info)
+    message.error(info)
+    return Promise.reject(info)
   }
 }

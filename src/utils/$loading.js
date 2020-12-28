@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import loadingView from '@/common/Loading'
+import loadingView from '@/common/loadIcon'
 
 let loadingModal = createApp(loadingView)
 let instance

@@ -1,7 +1,12 @@
 <template>
   <my-dialog v-model:visible="visible">
     <div class="check-in">
-      <img src="../image/close.png" class="close" @click="close()" alt />
+      <img
+        src="https://img1.halobear.com/wedding/FrCy7H_tfzhBI7dO9_Ya5qsI1eN9.png"
+        class="close"
+        @click="close()"
+        alt
+      />
       <div class="title text">登录李小朋 (゜-゜)つロ</div>
       <a-input
         size="large"
@@ -23,7 +28,7 @@
 <script>
 import { reactive } from 'vue';
 import { Input, Button } from 'ant-design-vue';
-import myDialog from '../BaseDialog';
+import myDialog from '../baseDialog';
 
 export default {
   components: {
@@ -34,7 +39,7 @@ export default {
   setup() {
     let payload = reactive({
       userName: 'lijiapeng',
-      password: '131452',
+      password: '123456',
     });
     return {
       payload,
@@ -53,7 +58,6 @@ export default {
       this.reject();
     },
     async onSubmit() {
-      console.log(this.payload, 'payload');
       await this.$store.dispatch('user/login', this.payload);
       this.visible = false;
       this.resolve();

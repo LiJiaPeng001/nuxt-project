@@ -35,13 +35,9 @@
 
 <script>
 import { imgUrl } from '@/utils/contants';
+import $login from '@/utils/$login';
 
 export default {
-  setup() {
-    return {
-      user: {},
-    };
-  },
   data() {
     return {
       imgUrl,
@@ -51,12 +47,17 @@ export default {
       ],
     };
   },
+  computed: {
+    user() {
+      return this.$store.state.user.user;
+    },
+  },
   methods: {
     logout() {
       this.$store.dispatch('user/logout');
     },
     login() {
-      this.$login();
+      $login();
     },
   },
 };

@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
-import loginView from '@/common/CheckIn'
+import store from '../store'
+import loginView from '@/common/checkIn'
 
 let loginModal = createApp(loginView)
+loginModal.use(store)
+
 let instance
 
 export default () => {

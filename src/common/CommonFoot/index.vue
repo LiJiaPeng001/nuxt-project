@@ -13,10 +13,6 @@ export default {};
 
 <style lang='less' scoped>
 .common-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background-color: #212121;
   .footer-box {
     width: 1190px;

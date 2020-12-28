@@ -4,19 +4,38 @@
       <li v-for="it in 10" :key="it"></li>
     </ul>
     <common-head></common-head>
+    <div class="page-content flex">
+      <my-info></my-info>
+      <div>
+        <create-info :data="record" @ok="createThing" style="margin-bottom: 15px"></create-info>
+        <word-list :list="list"></word-list>
+        <my-pagination :total="total" :payload="payload"></my-pagination>
+      </div>
+      <right-slide></right-slide>
+    </div>
     <common-foot></common-foot>
   </div>
 </template>
 
 <script>
 import * as Api from '@/api/blog';
-import commonHead from '@/common/CommonHead';
-import commonFoot from '@/common/CommonFoot';
+import commonHead from '@/common/commonHead';
+import commonFoot from '@/common/commonFoot';
+import MyPagination from '@/common/myPagination';
+import MyInfo from './components/MyInfo';
+import CreateInfo from './components/CreateInfo';
+import WordList from './components/WordList';
+import RightSlide from './components/RightSlide';
 
 export default {
   components: {
     commonHead,
     commonFoot,
+    MyInfo,
+    CreateInfo,
+    WordList,
+    RightSlide,
+    MyPagination,
   },
   data() {
     return {
@@ -58,7 +77,6 @@ export default {
 
 <style lang='less' scoped>
 .home-page {
-  padding: 0 0 30px;
   background-image: url('./images/bg.png');
   background-attachment: fixed;
   min-height: 100vh;
@@ -67,6 +85,7 @@ export default {
     align-items: flex-start;
     position: relative;
     z-index: 2;
+    padding: 30px 0;
   }
   ul {
     position: fixed;

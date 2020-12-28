@@ -10,6 +10,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '@/views/index'),
   },
   {
+    path: '/user:id',
+    name: 'User',
+    meta: {
+      title: '用户',
+    },
+    component: () => import(/* webpackChunkName: "about" */ '@/views/user'),
+  },
+  {
     path: '/test',
     name: 'test',
     meta: {

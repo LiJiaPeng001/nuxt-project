@@ -2,6 +2,7 @@ import authority from '@/utils/authority'
 import * as Api from '@/api/user'
 
 export default {
+  namespaced: true,
   state: {
     user: authority.get(),
   },
