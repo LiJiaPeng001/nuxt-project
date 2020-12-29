@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import component from '@/common'
-import { message, Avatar, Popover, Button, Icon } from 'ant-design-vue'
+import { message, Avatar, Popover, Button, Icon, Form } from 'ant-design-vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -19,6 +19,7 @@ Vue.directive('preview', lazyImage)
 Vue.component('a-avatar', Avatar)
 Vue.component('a-popover', Popover)
 Vue.component('a-button', Button)
+Vue.use(Form)
 Vue.use(Icon)
 
 Vue.config.globalProperties.$message = message

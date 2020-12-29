@@ -2,6 +2,7 @@ const components = {}
 
 // 自动引入当前文件夹全部组件
 const r = require.context('./', true, /index\.vue/)
+
 r.keys().forEach((key) => {
   const name = key
     .replace(/^\.\//, '')
