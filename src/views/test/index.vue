@@ -2,6 +2,9 @@
   <div class="test">
     <div class="title">test</div>
     <div class="subtitle">subtitle</div>
+    <div class="subtitle">subtitle</div>
+    <div class="subtitle">subtitle</div>
+    <div class="subtitle">subtitle</div>
   </div>
 </template>
   
