@@ -3,8 +3,11 @@ import authority from '@/utils/authority'
 import { message } from 'ant-design-vue'
 import $login from '../$login'
 import { getErrMsg, getErrStatus } from './status'
+import { baseURL } from '@/contants'
 
-const instance = Axios.create({})
+const instance = Axios.create({
+  baseURL,
+})
 
 export default async (
   options = {

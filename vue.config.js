@@ -1,8 +1,4 @@
-const apiMap = {
-  development: 'http://localhost:10086',
-  production: 'http://api.mcljp.com',
-}
-const Api = apiMap[process.env.NODE_ENV]
+const { baseURL } = require('./src/contants/index')
 
 module.exports = {
   css: {
@@ -22,7 +18,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: Api,
+        target: baseURL,
         changeOrigin: true,
       },
     },
