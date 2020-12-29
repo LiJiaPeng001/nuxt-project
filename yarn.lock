@@ -5377,6 +5377,14 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
+kuan-vue-photoswipe@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/kuan-vue-photoswipe/-/kuan-vue-photoswipe-2.0.1.tgz#08a792fdc6a359d6cd7f1b85de1800a9092d5474"
+  integrity sha512-tsD38g36OFgtumVzslowi8CngUCsCZw9FISidBNRFN2T5i6lJnNI6OjzuCm6bBzhfrfXgxlEoc6QwTo9wpHkKg==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^3.0.0"
+
 launch-editor-middleware@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/launch-editor-middleware/download/launch-editor-middleware-2.2.1.tgz#e14b07e6c7154b0a4b86a0fd345784e45804c157"

@@ -20,6 +20,7 @@
       <!-- 用户信息 -->
       <a-popover>
         <template v-slot:content v-if="user.id">
+          <p @click="toMy" class="text">我的空间</p>
           <p @click="logout" class="text">退出登录</p>
         </template>
         <template v-slot:content v-else>
@@ -41,10 +42,7 @@ export default {
   data() {
     return {
       imgUrl,
-      tabs: [
-        { name: '首页', query: '/' },
-        { name: '我的空间', query: '/user' },
-      ],
+      tabs: [{ name: '首页', query: '/' }],
     };
   },
   computed: {
@@ -53,6 +51,11 @@ export default {
     },
   },
   methods: {
+    toMy() {
+      this.$router.push({
+        path: `/user/${this.user.id}`,
+      });
+    },
     logout() {
       this.$store.dispatch('user/logout');
     },
@@ -84,6 +87,7 @@ export default {
       .tab {
         margin-right: 30px;
         color: #212121;
+        cursor: pointer;
       }
       .active-tab {
         color: #00a1d6;

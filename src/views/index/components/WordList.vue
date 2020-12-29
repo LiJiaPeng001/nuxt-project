@@ -81,7 +81,8 @@ export default {
   width: 632px;
   border-radius: 4px;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 80vh;
+  transition: height 0.2s linear;
   .word-item {
     position: relative;
     border-radius: 4px;

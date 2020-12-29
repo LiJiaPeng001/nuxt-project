@@ -1,17 +1,17 @@
 <template>
   <div class="navigator middle-flex page-content">
-    <router-link
-      :to="{ query: { nav: it.key } }"
+    <div
       class="nav-item center-flex"
       :class="{ 'active-nav': it.key === nav }"
       v-for="it in navList"
       :key="it.key"
+      @click="updateKey(it.key)"
       @mouseover="onMouseOver(it.key)"
       @mouseleave="onMouseLeave"
     >
       <i :style="{ color: it.color }" :class="`iconfont ${it.icon}`"></i>
       <div class="text">{{ it.title }}</div>
-    </router-link>
+    </div>
     <div :style="borderStyle" class="n-cursor"></div>
   </div>
 </template>
@@ -53,6 +53,9 @@ export default {
     },
     onMouseLeave() {
       this.overKey = this.nav;
+    },
+    updateKey(key) {
+      this.$emit('update:nav', key);
     },
   },
 };

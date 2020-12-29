@@ -1,16 +1,16 @@
 <template>
-  <div class="like-view flex">
+  <div class="like-view flex page">
     <!-- left-slide -->
     <div class="nav-slide">
       <div
         class="nav-item middle-flex"
         v-for="it in navList"
         :key="it.key"
-        :class="{'active-nav':nav === it.key}"
+        :class="{ 'active-nav': nav === it.key }"
         @click="onChangeNav(it.key)"
       >
-        <i :class="['iconfont',it.icon]"></i>
-        <div class="text">{{it.name}}</div>
+        <i :class="['iconfont', it.icon]"></i>
+        <div class="text">{{ it.name }}</div>
       </div>
     </div>
     <!-- right-info -->
@@ -29,13 +29,13 @@ export default {
       nav: 'like',
       navList: [
         { name: '我的关注', icon: 'icon-fensi', color: '', key: 'like' },
-        { name: '我的粉丝', icon: 'icon-guanzhu1', color: '', key: 'fensi' }
+        { name: '我的粉丝', icon: 'icon-guanzhu1', color: '', key: 'fensi' },
       ],
       payload: {
         page: 1,
-        per_page: 12
+        per_page: 12,
       },
-      list: []
+      list: [],
     };
   },
   computed: {
@@ -45,7 +45,7 @@ export default {
     user_id() {
       let { id = '' } = this.$route.params;
       return id || this.user.id;
-    }
+    },
   },
   mounted() {
     this.fetchFans();
@@ -58,8 +58,8 @@ export default {
     },
     onChangeNav(key) {
       this.nav = key;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -68,6 +68,7 @@ export default {
   position: relative;
   margin-top: 15px;
   align-items: flex-start;
+  min-height: calc(100vh - 469px);
   .nav-slide {
     width: 210px;
     background-color: #ffffff;

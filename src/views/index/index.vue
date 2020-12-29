@@ -77,7 +77,7 @@ export default {
 
 <style lang='less' scoped>
 .home-page {
-  background-image: url('./images/bg.png');
+  background-image: url('https://img1.halobear.com/wedding/FhaI1cDUUrcmDOqgT5IzjhcGD8Hh.png');
   background-attachment: fixed;
   min-height: 100vh;
   .page-content {
