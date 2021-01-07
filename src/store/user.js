@@ -14,15 +14,13 @@ export default {
     },
   },
   actions: {
-    async login({ commit }, payload) {
+    async login(options, payload) {
       const data = await Api.login(payload)
       authority.set(data)
-      commit('SET_USER', { user: data })
       location.reload()
     },
-    logout({ commit }) {
+    logout() {
       authority.clear()
-      commit('SET_USER', { user: {} })
       location.reload()
     },
   },
