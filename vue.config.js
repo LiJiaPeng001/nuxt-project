@@ -1,6 +1,6 @@
 const apiMap = {
   development: 'http://localhost:10086',
-  production: 'http://api.mcljp.com',
+  production: 'http://mcljp.com:10086',
 }
 
 const baseURL = apiMap[process.env.NODE_ENV]
