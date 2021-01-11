@@ -2,7 +2,6 @@ import authority from '@/utils/authority'
 import * as Api from '@/api/user'
 
 export default {
-  namespaced: true,
   state: {
     user: authority.get(),
   },
@@ -14,12 +13,14 @@ export default {
     },
   },
   actions: {
-    async login(options, payload) {
+    async login({ commit }, payload) {
       const data = await Api.login(payload)
       authority.set(data)
+      commit('SET_USER', { user: data })
       location.reload()
     },
-    logout() {
+    logout({ commit }) {
+      commit('SET_USER', { user: {} })
       authority.clear()
       location.reload()
     },
