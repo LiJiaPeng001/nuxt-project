@@ -2,8 +2,24 @@ import * as qiniu from 'qiniu-js'
 import { uploadToken } from '@/api/upload'
 import authority from '@/utils/authority'
 import $loading from '@/utils/$loading'
+import md5 from 'js-md5'
 
 let input
+
+const readFileMd5 = (file) => {
+  let fileReader = new FileReader()
+  fileReader.readAsBinaryString(file)
+  return new Promise((resolve, reject) => {
+    try {
+      fileReader.onload = (e) => {
+        const md5Key = md5(e.target.result)
+        resolve(md5Key)
+      }
+    } catch (error) {
+      reject(error)
+    }
+  })
+}
 
 export function createElement(options = {}) {
   if (!input) {
@@ -17,14 +33,14 @@ export function createElement(options = {}) {
   }
 }
 
-export function upload({ file }) {
+export async function upload({ file }) {
   let { qnToken } = authority.get()
+  let key = await readFileMd5(file)
+  let token = qnToken
+  let putExtra = {}
+  let config = { useCdnDomain: true }
+  const observable = qiniu.upload(file, key, token, putExtra, config)
   return new Promise((resolve, reject) => {
-    let key = file.name
-    let token = qnToken
-    let putExtra = {}
-    let config = { useCdnDomain: true }
-    const observable = qiniu.upload(file, key, token, putExtra, config)
     observable.subscribe({
       next({ uploadInfo = {}, total = {} }) {
         console.log(uploadInfo, total)
