@@ -1,5 +1,10 @@
 <template>
-  <div class="index-container center-flex">我永远喜欢吃鸡胸肉</div>
+  <div class="index-container center-flex">
+    <p>我永远喜欢吃鸡胸肉</p>
+    <p>我永远喜欢吃鸡胸肉</p>
+    <p>我永远喜欢吃鸡胸肉</p>
+    <p>我永远喜欢吃鸡胸肉</p>
+  </div>
 </template>
 
 <script>
@@ -13,5 +18,6 @@ export default {};
   background-color: #000;
   font-size: 32px;
   font-weight: bold;
+  flex-direction: column;
 }
 </style>
