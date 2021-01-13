@@ -5,17 +5,17 @@ const routes = [
     path: '/',
     name: 'Index',
     meta: {
-      title: '首页',
+      title: '',
     },
     component: () => import(/* webpackChunkName: "about" */ '@/views/index'),
   },
   {
-    path: '/user/:id',
-    name: 'User',
+    path: '/yang',
+    name: 'Yang',
     meta: {
-      title: '用户',
+      title: '李阳洋',
     },
-    component: () => import(/* webpackChunkName: "about" */ '@/views/user'),
+    component: () => import(/* webpackChunkName: "about" */ '@/views/yang/index.vue'),
   },
   {
     path: '/test',
@@ -30,6 +30,10 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title || '李小朋 (ง ˙o˙)ว'
 })
 
 export default router
