@@ -8,8 +8,9 @@
         :class="{ opacity: show.indexOf(it) > -1 }"
         @mouseover="push(it)"
         class="item"
-        v-for="it in 1000"
+        v-for="(it, i) in 1000"
         :key="it"
+        :style="{ 'animation-delay': i * 0.02 + 's' }"
       >
         〰
       </div>
@@ -51,8 +52,8 @@ export default {
 .item {
   font-size: 0.28rem;
   width: 0.6rem;
-  height: 0.25rem;
-  line-height: 0.25rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   text-align: center;
   background-color: #fb7299;
   cursor: pointer;
@@ -60,7 +61,7 @@ export default {
   position: relative;
   z-index: 2;
   color: #ffffff;
-  transition: 0.4s linear;
+  animation: opacity 2s linear forwards;
 }
 .opacity {
   opacity: 0;
@@ -74,5 +75,13 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>
