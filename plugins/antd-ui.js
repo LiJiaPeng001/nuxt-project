@@ -1,4 +1,6 @@
 import Vue from 'vue'
-import Antd from 'ant-design-vue/lib'
+import { Button, message, BackTop } from 'ant-design-vue'
 
-Vue.use(Antd)
+Vue.use(Button)
+Vue.use(message)
+Vue.use(BackTop)

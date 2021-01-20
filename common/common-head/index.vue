@@ -16,7 +16,7 @@
       </div>
       <!-- 用户信息 -->
       <div class="user-info middle-flex">
-        <a-avatar :src="imgUrl" :size="36" icon="user" />
+        <img :src="imgUrl" class="avatar" />
       </div>
     </div>
   </div>
@@ -65,6 +65,11 @@ export default {
   }
   .user-info {
     flex-shrink: 0;
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
     .name {
       max-width: 120px;
       white-space: nowrap;

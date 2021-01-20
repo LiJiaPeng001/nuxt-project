@@ -45,7 +45,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.less', '@/style/index.less'],
+  css: ['@/style/index.less'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -84,6 +84,19 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'ant-design-vue',
+            libraryDirectory: 'es',
+            style: true,
+          },
+        ],
+      ],
+    },
+    transpile: ['ant-design-vue'],
     loaders: {
       less: {
         lessOptions: {

@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import * as Api from '@/api/blog';
 import home from '@/components/index';
 
 export default {

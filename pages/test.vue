@@ -3,12 +3,8 @@
 </template>
 
 <script>
-import * as Api from '@/api/test';
-
 export default {
-  mounted() {
-    Api.test();
-  }
+  mounted() {},
 };
 </script>
 
