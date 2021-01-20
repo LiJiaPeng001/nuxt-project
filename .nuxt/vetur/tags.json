@@ -1,0 +1,14 @@
+{
+  "Detail": {
+    "description": "Auto imported from components/detail/index.vue"
+  },
+  "LazyDetail": {
+    "description": "Auto imported from components/detail/index.vue"
+  },
+  "Index": {
+    "description": "Auto imported from components/index/index.vue"
+  },
+  "LazyIndex": {
+    "description": "Auto imported from components/index/index.vue"
+  }
+}

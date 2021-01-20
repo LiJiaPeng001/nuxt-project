@@ -1,57 +1,27 @@
 {
-  "name": "my-blog",
-  "version": "0.1.0",
+  "name": "nuxt-test",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "cross-env X_ENV=development NODE_ENV=development vue-cli-service serve",
-    "lint": "cross-env NODE_ENV=production vue-cli-service lint",
-    "build": "cross-env X_ENV=online NODE_ENV=production vue-cli-service build",
-    "build:test": "cross-env X_ENV=test NODE_ENV=production vue-cli-service build",
-    "dev": "vue-cli-service serve"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "pm2": "pm2 start pm2.json",
+    "pm2:restart": "pm2 restart pm2.json"
   },
   "dependencies": {
-    "ant-design-vue": "^2.0.0-rc.7",
-    "axios": "^0.21.1",
-    "core-js": "^3.6.5",
-    "js-md5": "^0.7.3",
-    "kuan-vue-photoswipe": "^2.0.1",
-    "qiniu-js": "^3.1.2",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-import": "^1.13.3",
-    "cross-env": "^7.0.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "less": "^4.0.0",
-    "less-loader": "^7.2.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@nuxtjs/proxy": "^2.0.1",
+    "ant-design-vue": "^1.6.2",
+    "axios": "^0.20.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "js-cookie": "^2.2.1",
+    "kuan-vue-photoswipe": "1.0.6",
+    "less": "^3.12.0",
+    "less-loader": "^6.2.0",
+    "nprogress": "^0.2.0",
+    "nuxt": "^2.13.0",
+    "qiniu-js": "^3.1.1"
+  }
 }

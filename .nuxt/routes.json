@@ -1,0 +1,16 @@
+[
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "/Users/halobear/Desktop/my-project/nuxt-project/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_baf01ba0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/halobear/Desktop/my-project/nuxt-project/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7167e1b8"
+  }
+]

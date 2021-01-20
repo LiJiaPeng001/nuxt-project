@@ -1,0 +1,32 @@
+<template>
+  <div class="body">
+    <CommonHead></CommonHead>
+    <Nuxt class="nuxt" />
+    <CommonFoot></CommonFoot>
+    <ToTop></ToTop>
+  </div>
+</template>
+
+<script>
+import CommonHead from '@/common/common-head';
+import CommonFoot from '@/common/common-foot';
+import ToTop from '@/common/to-top';
+
+export default {
+  components: {
+    CommonHead,
+    CommonFoot,
+    ToTop,
+  },
+};
+</script>
+
+<style lang='less' scoped>
+.body {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+  min-width: 1190px;
+}
+</style>
