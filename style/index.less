@@ -2,17 +2,6 @@
 @errorColor: #f66495;
 @textColor: #212121;
 
-@font-face {
-  font-family: "iconfont"; /* project id 2073318 */
-  src: url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.eot");
-  src: url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.eot?#iefix")
-      format("embedded-opentype"),
-    url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.woff2") format("woff2"),
-    url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.woff") format("woff"),
-    url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.ttf") format("truetype"),
-    url("//at.alicdn.com/t/font_2073318_4zl502hkqf5.svg#iconfont") format("svg");
-}
-
 .flex {
   display: flex;
 }
@@ -51,4 +40,12 @@
 .page-content {
   width: 1190px;
   margin: 0 auto;
+}
+
+.ellipsis(@line:2) {
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

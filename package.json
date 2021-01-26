@@ -10,7 +10,7 @@
     "pm2:restart": "pm2 restart pm2.json"
   },
   "dependencies": {
-    "@nuxtjs/proxy": "^2.0.1",
+    "@nuxtjs/proxy": "^2.1.0",
     "ant-design-vue": "^1.6.2",
     "axios": "^0.20.0",
     "eslint": "^5.16.0",

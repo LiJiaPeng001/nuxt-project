@@ -1,4 +1,4 @@
-import { baseURL } from './utils/contants'
+import { baseURL } from './contants'
 const key = process.env.NODE_ENV
 
 export default {
@@ -13,6 +13,7 @@ export default {
   },
   server: {
     host: '0.0.0.0',
+    port: '3000',
   },
   /*
    ** Nuxt target
@@ -73,11 +74,7 @@ export default {
    */
   modules: ['@nuxtjs/proxy'],
   proxy: {
-    '/api': {
-      target: baseURL,
-      changeOrigin: true,
-      // pathRewrite: { "^/api": "" }
-    },
+    '/api': baseURL,
   },
   /*
    ** Build configuration

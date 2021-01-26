@@ -1,8 +1,8 @@
 <template>
   <div class="common-footer">
     <div class="footer-box middle-flex">
+      <a href="https://beian.miit.gov.cn/" class="num">豫ICP备2021001989号</a>
       <div class="title">©2021 李小朋</div>
-      <a href="http://www.beian.miit.gov.cn" class="num">豫ICP备18001833号-1</a>
     </div>
   </div>
 </template>

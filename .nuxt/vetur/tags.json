@@ -1,14 +1,20 @@
 {
-  "Detail": {
-    "description": "Auto imported from components/detail/index.vue"
+  "BlogDetail": {
+    "description": "Auto imported from components/blog-detail/index.vue"
   },
-  "LazyDetail": {
-    "description": "Auto imported from components/detail/index.vue"
+  "LazyBlogDetail": {
+    "description": "Auto imported from components/blog-detail/index.vue"
   },
   "Index": {
     "description": "Auto imported from components/index/index.vue"
   },
   "LazyIndex": {
     "description": "Auto imported from components/index/index.vue"
+  },
+  "BlogList": {
+    "description": "Auto imported from components/index/components/blog-list.vue"
+  },
+  "LazyBlogList": {
+    "description": "Auto imported from components/index/components/blog-list.vue"
   }
 }

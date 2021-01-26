@@ -15,15 +15,15 @@
         >
       </div>
       <!-- 用户信息 -->
-      <div class="user-info middle-flex">
+      <!-- <div class="user-info middle-flex">
         <img :src="imgUrl" class="avatar" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import { imgUrl } from '@/utils/contants';
+import { imgUrl } from '@/contants';
 
 export default {
   data() {

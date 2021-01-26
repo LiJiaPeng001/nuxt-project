@@ -1,0 +1,21 @@
+<template>
+  <detail :data="data"></detail>
+</template>
+
+<script>
+import * as Api from '@/api/blog';
+import detail from '@/components/blog-detail';
+
+export default {
+  components: {
+    detail,
+  },
+  async asyncData({ params }) {
+    let { id = '' } = params;
+    let data = await Api.detail(id);
+    return {
+      data,
+    };
+  },
+};
+</script>
