@@ -12,7 +12,7 @@
         <div class="cate">来自分类：{{ it.cate.name }}</div>
         <div class="created_at">
           <i class="iconfont icon-time"></i>
-          <span class="text">{{ it.createdAt }}</span>
+          <span class="text">{{ it.updatedAt }}</span>
         </div>
       </div>
     </router-link>

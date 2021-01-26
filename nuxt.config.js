@@ -25,21 +25,26 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: '李小朋 (ง ˙o˙)ว',
+    title: '李家朋的个人博客',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        hid: 'keyword',
+        name: 'keyword',
+        content: '个人博客，vue，vue-cli，学习分享，前端，node，koa2',
+      },
+      {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: '李小朋的个人博客网站',
       },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: '//at.alicdn.com/t/font_2073318_b62s9iewnfv.css',
+        href: '//at.alicdn.com/t/font_2073318_8uiuxyyvj0d.css',
       },
     ],
   },

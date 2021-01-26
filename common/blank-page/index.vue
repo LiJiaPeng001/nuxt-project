@@ -1,6 +1,6 @@
 <template>
   <div class="blank-page center-flex">
-    <img src="./no-data.png" alt />
+    <img src="https://img1.halobear.com/wedding/Fl9GA24LcQeSKoZ29C__Fqx382o1.png" alt />
   </div>
 </template>
 

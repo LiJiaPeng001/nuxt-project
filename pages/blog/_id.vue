@@ -17,5 +17,10 @@ export default {
       data,
     };
   },
+  head() {
+    return {
+      title: this.data.title,
+    };
+  },
 };
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div class="index-container page">
     <blog-list :list="list"></blog-list>
+    <blank-page v-if="!total"></blank-page>
   </div>
 </template>
 

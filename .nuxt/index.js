@@ -66,7 +66,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"李小朋 (ง ˙o˙)ว","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2073318_b62s9iewnfv.css"}],"style":[],"script":[]},
+    head: {"title":"李家朋的个人博客","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"keyword","name":"keyword","content":"个人博客，vue，vue-cli，学习分享，前端，node，koa2"},{"hid":"description","name":"description","content":"李小朋的个人博客网站"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2073318_8uiuxyyvj0d.css"}],"style":[],"script":[]},
 
     store,
     router,
