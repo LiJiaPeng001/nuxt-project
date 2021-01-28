@@ -4,10 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "pm2": "pm2 start pm2.json",
-    "pm2:restart": "pm2 restart pm2.json"
+    "build": "nuxt build && sh cp-build.sh",
+    "start": "npm install --registry=https://registry.npm.taobao.org && nuxt start"
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
