@@ -8,7 +8,7 @@
         <div class="text">{{ data.updatedAt }}</div>
       </div>
     </div>
-    <div class="content" v-html="data.content"></div>
+    <div class="content" v-html="data.md"></div>
   </div>
 </template>
 

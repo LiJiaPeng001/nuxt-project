@@ -16,5 +16,11 @@
   },
   "LazyBlogList": {
     "description": "Auto imported from components/index/components/blog-list.vue"
+  },
+  "RightPanel": {
+    "description": "Auto imported from components/index/components/right-panel.vue"
+  },
+  "LazyRightPanel": {
+    "description": "Auto imported from components/index/components/right-panel.vue"
   }
 }

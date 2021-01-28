@@ -16,6 +16,7 @@
         </div>
       </div>
     </router-link>
+    <blank-page v-if="total === list.length"></blank-page>
   </div>
 </template>
 
@@ -25,6 +26,10 @@ export default {
     list: {
       type: Array,
       default: () => [],
+    },
+    total: {
+      type: Number,
+      defualt: 0,
     },
   },
 };
@@ -40,16 +45,14 @@ export default {
 }
 
 .blog-list {
-  width: 966px;
-  padding: 15px 0;
-  margin: 0 auto;
+  width: 870px;
+  padding: 25px 0;
   .blog-item {
-    height: 180px;
     box-sizing: border-box;
     display: block;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -87,8 +90,6 @@ export default {
       font-weight: 400;
       color: #999999;
       line-height: 20px;
-      .cate {
-      }
     }
   }
 }
