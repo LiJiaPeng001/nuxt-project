@@ -29,7 +29,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'baidu-site-verification', content: 'code-se6visblp1' },
       {
         hid: 'keyword',
         name: 'keyword',
@@ -80,7 +79,13 @@ export default {
    */
   modules: ['@nuxtjs/proxy'],
   proxy: {
-    '/api': baseURL,
+    '/api': {
+      target: baseURL,
+      changOrigin: true, //开启代理
+      pathRewrite: {
+        '^/api': '/',
+      },
+    },
   },
   /*
    ** Build configuration
