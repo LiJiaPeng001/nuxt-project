@@ -82,9 +82,6 @@ export default {
     '/api': {
       target: baseURL,
       changOrigin: true, //开启代理
-      pathRewrite: {
-        '^/api': '/',
-      },
     },
   },
   /*
