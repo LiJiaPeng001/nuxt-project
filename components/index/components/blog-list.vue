@@ -5,6 +5,7 @@
       class="blog-item"
       v-for="it in list"
       :key="it.key"
+      :title="it.title"
     >
       <div class="title">{{ it.title }}</div>
       <div class="content">{{ it.content }}</div>
