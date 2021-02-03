@@ -60,7 +60,7 @@ export default {
     cursor: pointer;
     transition: 0.2s linear;
     &:hover {
-      box-shadow: 0 0 8px 4px rgba(238, 238, 238);
+      box-shadow: 0 0 8px 2px #dfdfdf;
       .title {
         color: @primary-color;
       }
@@ -71,6 +71,7 @@ export default {
       color: #222222;
       line-height: 28px;
       margin-bottom: 10px;
+      transition: 0.2s linear;
     }
     .content {
       font-size: 14px;
