@@ -4,15 +4,15 @@
     <div class="r-item">
       <div class="title">分类标签</div>
       <div class="list middle-flex">
-        <div
+        <router-link
           class="item text"
           v-for="it in list"
           :key="it.id"
-          @click="saveParams({ cate_id: it.id })"
+          :to="{ query: { ...$route.query, cate_id: it.id, page: 1 } }"
           :class="{ activeItem: cate_id == it.id }"
         >
           {{ it.name }}
-        </div>
+        </router-link>
       </div>
     </div>
     <!-- 友情链接 -->
@@ -74,6 +74,9 @@ export default {
         color: rgba(0, 0, 0, 0.65);
         cursor: pointer;
         transition: 0.2s linear;
+        &:hover {
+          color: @primary-color;
+        }
       }
       .activeItem {
         color: @primary-color;

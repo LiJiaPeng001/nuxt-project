@@ -1,7 +1,9 @@
 <template>
   <div class="body">
     <CommonHead></CommonHead>
-    <Nuxt class="nuxt" />
+    <div class="nuxt">
+      <Nuxt />
+    </div>
     <CommonFoot></CommonFoot>
     <ToTop></ToTop>
   </div>
@@ -28,5 +30,10 @@ export default {
   position: relative;
   padding-bottom: 100px;
   min-width: 1190px;
+  display: flex;
+  flex-direction: column;
+  .nuxt {
+    flex: 1;
+  }
 }
 </style>

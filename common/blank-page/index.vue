@@ -13,5 +13,6 @@ export default {};
   width: 100%;
   padding: 50px 0;
   text-align: center;
+  margin: 0 auto;
 }
 </style>
