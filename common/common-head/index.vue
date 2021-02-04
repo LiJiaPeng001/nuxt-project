@@ -14,6 +14,14 @@
           >{{ it.name }}</router-link
         >
       </div>
+      <!-- 搜索 -->
+      <a-input-search
+        :maxLength="20"
+        placeholder="请输入博客标题"
+        class="searchInput"
+        v-model="payload.title"
+        @search="onSearch"
+      />
       <!-- 用户信息 -->
       <!-- <div class="user-info middle-flex">
         <img :src="imgUrl" class="avatar" />
@@ -27,10 +35,20 @@ import { imgUrl } from '@/contants';
 
 export default {
   data() {
+    let { title = '' } = this.$route.query;
     return {
       imgUrl,
       tabs: [{ name: '首页', key: 'index' }],
+      payload: {
+        title,
+      },
     };
+  },
+  methods: {
+    onSearch(title) {
+      if (title === this.$route.query.title) return;
+      this.saveParams({ title, page: 1 });
+    },
   },
 };
 </script>
@@ -79,6 +97,9 @@ export default {
       font-size: 16px;
       font-weight: 500;
     }
+  }
+  .searchInput {
+    width: 200px;
   }
 }
 </style>

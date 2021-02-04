@@ -12,5 +12,6 @@ export default {};
 .blank-page {
   width: 100%;
   padding: 50px 0;
+  text-align: center;
 }
 </style>
