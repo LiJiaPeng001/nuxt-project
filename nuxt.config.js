@@ -61,8 +61,8 @@ export default {
     { src: '~/plugins/mixin' }, // mixin
     { src: '~/plugins/photoSwiper', mode: 'client' }, // 预览图片插件
     { src: '~plugins/previewImage.js', mode: 'client' }, // 预加载
-    { src: '~/plugins/$auth', mode: 'client' }, // localstroge
-    { src: '~/plugins/component', mode: 'client' }, // 公共组件
+    { src: '~/plugins/$auth' }, // localstroge
+    { src: '~/plugins/component' }, // 公共组件
     { src: '~/plugins/process', mode: 'client' }, // 进度条
   ],
   /*

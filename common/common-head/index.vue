@@ -16,6 +16,7 @@
       </div>
       <!-- 搜索 -->
       <a-input-search
+        v-show="$route.name === 'index'"
         :maxLength="20"
         placeholder="请输入博客标题"
         class="searchInput"
