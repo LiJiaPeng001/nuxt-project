@@ -6862,10 +6862,10 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qiniu-js@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/qiniu-js/-/qiniu-js-3.1.1.tgz#a8dd7e044f4e0e0a03dc8288c34f0194794f34b0"
-  integrity sha512-eL3NzcCHuWzHvOpKTlHBvtkPJHrJp+VGnFDe+5olq4oo2KVsUPNlBEjtGE/sA+ZEeSBm4Pynt1QMO3Ve0Q8AGw==
+qiniu-js@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/qiniu-js/-/qiniu-js-3.1.2.tgz#b46e5e1ed806d757a81b542ac1342e04421d1d45"
+  integrity sha512-ZzSFNZXvhtbmvXvHlm8+umiKoGH+CxjuDPvl80sj1NzxLxvZ7SDn58jx65uXdOBhd+laNoqmKNBXCmw4QuQhuA==
   dependencies:
     "@babel/runtime-corejs2" "^7.10.2"
     exif-js "^2.3.0"

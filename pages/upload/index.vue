@@ -29,6 +29,11 @@
 import upload, { upload as singleUpload } from '@/utils/upload';
 
 export default {
+  head() {
+    return {
+      meta: [{ name: 'referrer', content: 'no-referrer' }],
+    };
+  },
   props: {
     value: {
       type: Array,
@@ -56,15 +61,12 @@ export default {
   },
   methods: {
     enter() {
-      console.log('开始');
       this.loading = true;
     },
     leave() {
-      console.log('离开');
       this.loading = false;
     },
     async drop(e) {
-      console.log('结束');
       let files = e.dataTransfer.files;
       for (let index = 0; index < files.length; index++) {
         const item = files[index];

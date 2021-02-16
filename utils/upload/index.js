@@ -50,7 +50,8 @@ export async function getFileMD5(file) {
 }
 
 export async function upload({ file }) {
-  let { qnToken } = authority.get()
+  let { qnToken = '' } = authority.get()
+  if (!qnToken) qnToken = await uploadToken()
   let key = await getFileMD5(file)
   key = key + file.name.slice(file.name.lastIndexOf('.'))
   return new Promise((resolve, reject) => {
