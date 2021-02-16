@@ -20,7 +20,8 @@
     "less-loader": "^6.2.0",
     "nprogress": "^0.2.0",
     "nuxt": "^2.13.0",
-    "qiniu-js": "^3.1.1"
+    "qiniu-js": "^3.1.1",
+    "spark-md5": "^3.0.1"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.3"

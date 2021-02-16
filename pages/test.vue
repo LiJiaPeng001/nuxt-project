@@ -1,9 +1,16 @@
 <template>
-  <div class="title">我是你爸爸</div>
+  <div class="title">
+    <upload-qn></upload-qn>
+  </div>
 </template>
 
 <script>
+import uploadQn from '@/common/upload-qn';
+
 export default {
+  components: {
+    uploadQn,
+  },
   mounted() {},
 };
 </script>
