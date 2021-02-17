@@ -16,6 +16,8 @@ export function createElement(options = {}) {
     input.style.top = '-1000px'
     document.body.append(input)
   }
+  input.value = null
+  input.click()
 }
 
 export async function getFileMD5(file) {
@@ -76,8 +78,6 @@ export async function upload({ file }) {
 export async function startUpload(options = { limit: 1 }) {
   options.multiple = options.limit > 1 ? true : false
   createElement(options)
-  input.value = null
-  input.click()
   return new Promise(async (resolve) => {
     input.onchange = async function() {
       await uploadToken()
@@ -91,9 +91,6 @@ export async function startUpload(options = { limit: 1 }) {
       }
       $loading.hide()
       resolve(imageInfo)
-    }
-    input.onfocus = function() {
-      console.log(222)
     }
   })
 }

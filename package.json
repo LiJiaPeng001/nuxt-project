@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "ant-design-vue": "^1.6.2",
+    "ant-design-vue": "^1.7.3",
     "axios": "^0.20.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.0",

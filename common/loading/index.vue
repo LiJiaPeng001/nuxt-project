@@ -1,6 +1,6 @@
 <template>
   <div class="fixed-loading center-flex" v-show="visible">
-    <a-spin tip="Loading..."> </a-spin>
+    <a-spin tip="加载中..."> </a-spin>
   </div>
 </template>
 

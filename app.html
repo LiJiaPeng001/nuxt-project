@@ -1,7 +1,17 @@
-<!-- 这是默认的模板 -->
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
   <script>
+    !(function(n, w) {
+      var e = n.document,
+        t = e.documentElement,
+        o = 'orientationchange' in n ? 'orientationchange' : 'resize',
+        a = function() {
+          var n = t.clientWidth || w
+          t.style.fontSize = (n / w) * 100 + 'px'
+        }
+      a()
+      e.addEventListener && n.addEventListener(o, a, !1)
+    })(window, 1190)
     var _hmt = _hmt || []
     ;(function() {
       var hm = document.createElement('script')

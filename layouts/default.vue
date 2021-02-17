@@ -1,15 +1,18 @@
-<template>
-  <div class="body">
-    <CommonHead></CommonHead>
-    <div class="nuxt">
-      <Nuxt />
+<template >
+  <a-config-provider :locale="locale">
+    <div class="body">
+      <common-head></common-head>
+      <div class="nuxt">
+        <Nuxt />
+      </div>
+      <common-foot></common-foot>
+      <to-top></to-top>
     </div>
-    <CommonFoot></CommonFoot>
-    <ToTop></ToTop>
-  </div>
+  </a-config-provider>
 </template>
 
 <script>
+import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import CommonHead from '@/common/common-head';
 import CommonFoot from '@/common/common-foot';
 import ToTop from '@/common/to-top';
@@ -19,6 +22,11 @@ export default {
     CommonHead,
     CommonFoot,
     ToTop,
+  },
+  data() {
+    return {
+      locale: zhCN,
+    };
   },
 };
 </script>
