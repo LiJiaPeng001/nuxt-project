@@ -44,7 +44,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: '//at.alicdn.com/t/font_2073318_8emg9g3itxn.css',
+        href: '//at.alicdn.com/t/font_2073318_i0dak91ex4.css',
       },
     ],
   },
@@ -52,6 +52,9 @@ export default {
    ** Global CSS
    */
   css: ['@/style/index.less'],
+  styleResources: {
+    less: ['./style/validate.less'],
+  },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -77,7 +80,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/proxy'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/proxy'],
   proxy: {
     '/api': {
       target: baseURL,

@@ -84,4 +84,9 @@ export default {
     }
   }
 }
+@media screen and (max-width: @mobile-width) {
+  .right-panel {
+    display: none;
+  }
+}
 </style>

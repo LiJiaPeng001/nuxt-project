@@ -50,7 +50,6 @@ export default {
   padding: 25px 0;
   .blog-item {
     box-sizing: border-box;
-    display: block;
     padding: 20px;
     background-color: #fff;
     border-radius: 4px;
@@ -92,6 +91,59 @@ export default {
       font-weight: 400;
       color: #999999;
       line-height: 20px;
+    }
+  }
+}
+@media screen and (max-width: @mobile-width) {
+  .blog-list {
+    width: 6.7rem;
+    margin: 0.2rem auto;
+    padding: 0;
+    .blog-item {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.2rem;
+      background-color: #fff;
+      border-radius: 0.04rem;
+      margin-bottom: 0.2rem;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: 0.2s linear;
+      &:hover {
+        box-shadow: 0 0 8px 2px #dfdfdf;
+        .title {
+          color: @primary-color;
+        }
+      }
+      .title {
+        font-size: 0.26rem;
+        font-weight: 500;
+        color: #222222;
+        line-height: 0.32rem;
+        margin-bottom: 0.1rem;
+        transition: 0.2s linear;
+      }
+      .content {
+        font-size: 0.24rem;
+        font-weight: 400;
+        color: #666666;
+        line-height: 0.3rem;
+        flex: 1;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 0.1rem;
+        .ellipsis(3);
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.24rem;
+        font-weight: 400;
+        color: #999999;
+        line-height: 0.3rem;
+      }
     }
   }
 }

@@ -3,6 +3,8 @@
     <div class="head-wrapper middle-flex">
       <!-- logo -->
       <img class="logo" :src="imgUrl" alt="李小朋" />
+      <!-- author -->
+      <div class="author">李家朋的个人博客</div>
       <!-- tabs -->
       <div class="tabs middle-flex">
         <router-link
@@ -11,8 +13,12 @@
           :key="it.key"
           :class="{ 'active-tab': $route.name === it.key || ($route.name || '').includes(it.key) }"
           :to="{ name: it.key }"
-          >{{ it.name }}</router-link
         >
+          {{ it.name }}
+        </router-link>
+        <a title="github" class="tab" target="_blank" href="https://github.com/LiJiaPeng001">
+          <i class="iconfont icon icon-git"></i>
+        </a>
       </div>
       <!-- 搜索 -->
       <a-input-search
@@ -23,10 +29,6 @@
         v-model="payload.title"
         @search="onSearch"
       />
-      <!-- 用户信息 -->
-      <!-- <div class="user-info middle-flex">
-        <img :src="imgUrl" class="avatar" />
-      </div> -->
     </div>
   </div>
 </template>
@@ -39,7 +41,7 @@ export default {
     let { title = '' } = this.$route.query;
     return {
       imgUrl,
-      tabs: [{ name: '首页', key: 'index' }],
+      tabs: [{ name: '七牛上传', key: 'upload' }],
       payload: {
         title,
       },
@@ -66,15 +68,24 @@ export default {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
+      margin-right: 20px;
+    }
+    .author {
+      font-weight: bold;
+      font-size: 16px;
       margin-right: 100px;
+      flex: 1;
     }
     .tabs {
-      flex: 1;
       font-size: 16px;
       font-weight: 500;
       .tab {
         margin-right: 30px;
-        color: #212121;
+        color: #68676c;
+        .icon {
+          color: #68676c;
+          font-size: 20px;
+        }
       }
       .active-tab {
         color: #00a1d6;
@@ -82,25 +93,40 @@ export default {
       }
     }
   }
-  .user-info {
-    flex-shrink: 0;
-    .avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-    }
-    .name {
-      max-width: 120px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-left: 10px;
-      font-size: 16px;
-      font-weight: 500;
-    }
-  }
   .searchInput {
     width: 200px;
+  }
+}
+@media screen and (max-width: @mobile-width) {
+  .common-head {
+    background-color: #fff;
+    .head-wrapper {
+      height: 1rem;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      .logo {
+        width: 0.5rem;
+        height: 0.5rem;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+      .author {
+        font-weight: bold;
+        font-size: 0.28rem;
+        margin-right: 0;
+        flex: 0 0 auto;
+      }
+      .tabs {
+        display: none;
+      }
+    }
+    .searchInput {
+      display: none;
+      width: 200px;
+    }
   }
 }
 </style>

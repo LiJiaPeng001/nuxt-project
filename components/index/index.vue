@@ -35,4 +35,10 @@ export default {
 .index-container {
   align-items: flex-start;
 }
+@media screen and (max-width: @mobile-width) {
+  .index-container {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
 </style>

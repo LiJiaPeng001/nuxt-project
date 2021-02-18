@@ -34,4 +34,30 @@ export default {};
     }
   }
 }
+@media screen and (max-width: @mobile-width) {
+  .common-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212121;
+    .footer-box {
+      width: 100%;
+      margin: 0 auto;
+      height: 1rem;
+      box-sizing: border-box;
+      color: #fff;
+      font-weight: 500;
+      justify-content: space-between;
+      font-size: 0.2rem;
+      padding: 0 0.2rem;
+      .num {
+        color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
 </style>
