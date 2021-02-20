@@ -2,9 +2,11 @@
   <div class="common-head">
     <div class="head-wrapper middle-flex">
       <!-- logo -->
-      <img class="logo" :src="imgUrl" alt="李小朋" />
-      <!-- author -->
-      <div class="author">李家朋的个人博客</div>
+      <a title="李家朋的个人博客" href="/" class="logo-wrapper middle-flex">
+        <img class="logo" :src="imgUrl" alt="李小朋" />
+        <!-- author -->
+        <div class="author">李家朋的个人博客</div>
+      </a>
       <!-- tabs -->
       <div class="tabs middle-flex">
         <router-link
@@ -64,6 +66,9 @@ export default {
     width: 1190px;
     margin: 0 auto;
     box-sizing: border-box;
+    .logo-wrapper {
+      flex: 1;
+    }
     .logo {
       width: 40px;
       height: 40px;
@@ -73,8 +78,8 @@ export default {
     .author {
       font-weight: bold;
       font-size: 18px;
-      margin-right: 100px;
-      flex: 1;
+      padding-right: 100px;
+      color: #222222;
     }
     .tabs {
       font-size: 16px;
@@ -107,6 +112,10 @@ export default {
       box-sizing: border-box;
       align-items: center;
       justify-content: center;
+      .logo-wrapper {
+        flex: 1;
+        justify-content: center;
+      }
       .logo {
         width: 0.5rem;
         height: 0.5rem;
@@ -116,8 +125,7 @@ export default {
       .author {
         font-weight: bold;
         font-size: 0.32rem;
-        margin-right: 0;
-        flex: 0 0 auto;
+        padding-right: 0;
       }
       .tabs {
         display: none;

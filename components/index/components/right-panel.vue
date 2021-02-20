@@ -10,6 +10,7 @@
           :key="it.id"
           :to="{ query: { ...$route.query, cate_id: it.id, page: 1 } }"
           :class="{ activeItem: cate_id == it.id }"
+          :title="it.name"
         >
           {{ it.name }}
         </router-link>
