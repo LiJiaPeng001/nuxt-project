@@ -72,7 +72,7 @@ export default {
     }
     .author {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
       margin-right: 100px;
       flex: 1;
     }
@@ -115,7 +115,7 @@ export default {
       }
       .author {
         font-weight: bold;
-        font-size: 0.28rem;
+        font-size: 0.32rem;
         margin-right: 0;
         flex: 0 0 auto;
       }

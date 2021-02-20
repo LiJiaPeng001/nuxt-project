@@ -96,13 +96,13 @@ export default {
 }
 @media screen and (max-width: @mobile-width) {
   .blog-list {
-    width: 6.7rem;
+    width: 7rem;
     margin: 0.2rem auto;
     padding: 0;
     .blog-item {
       width: 100%;
       box-sizing: border-box;
-      padding: 0.2rem;
+      padding: 0.24rem;
       background-color: #fff;
       border-radius: 0.04rem;
       margin-bottom: 0.2rem;
@@ -121,7 +121,7 @@ export default {
         font-weight: 500;
         color: #222222;
         line-height: 0.32rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.14rem;
         transition: 0.2s linear;
       }
       .content {
@@ -133,7 +133,7 @@ export default {
         white-space: pre-wrap;
         word-wrap: break-word;
         word-break: break-all;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
         .ellipsis(3);
       }
       .bottom {
