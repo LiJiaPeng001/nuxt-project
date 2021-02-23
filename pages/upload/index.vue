@@ -1,6 +1,6 @@
 <template>
   <div class="upload-qn center-flex">
-    <div class="upload-box">
+    <div class="upload-box" v-show="images.length">
       <textarea class="textarea" :value="imageText"></textarea>
       <div class="upload-list">
         <div class="upload-item" @click="preview(i)" v-for="(it, i) in images" :key="i">
@@ -82,10 +82,8 @@ export default {
       );
     },
     async upload() {
-      this.loading = true;
       const data = await upload({ limit: 10 });
       this.images.push(...data);
-      this.loading = false;
     },
   },
 };
@@ -140,10 +138,10 @@ export default {
     pointer-events: none;
   }
   .upload-icon {
-    width: 500px;
-    height: 360px;
-    background-color: #fafafa;
-    border: 1px dashed #d9d9d9;
+    width: 460px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px 2px #eee;
     border-radius: 4px;
     cursor: pointer;
     transition: border-color 0.3s ease;
