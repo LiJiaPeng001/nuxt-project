@@ -88,7 +88,7 @@ export default {
   proxy: {
     "/api": {
       target: baseURL,
-      changOrigin: true //开启代理
+      changOrigin: true
     }
   },
   /*
