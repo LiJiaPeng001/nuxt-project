@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
-  <script>
-    var _hmt = _hmt || []
-    ;(function() {
+<script>
+  var _hmt = _hmt || []
+    ; (function () {
       var hm = document.createElement('script')
       hm.src = 'https://hm.baidu.com/hm.js?e00a7c995b7bfcd869e37c68168ec9ac'
       var s = document.getElementsByTagName('script')[0]
       s.parentNode.insertBefore(hm, s)
     })()
-  </script>
-  <head {{ HEAD_ATTRS }}>
-    {{ HEAD }}
-  </head>
-  <body {{ BODY_ATTRS }}>
-    {{ APP }}
-  </body>
+</script>
+
+<head {{ HEAD_ATTRS }}>
+  {{ HEAD }}
+</head>
+
+<body {{ BODY_ATTRS }}>
   <script>
-    !(function(n, w) {
+    !(function (n, w) {
       var e = n.document,
         t = e.documentElement,
         o = 'orientationchange' in n ? 'orientationchange' : 'resize',
-        a = function() {
-          var n = document.body.clientWidth || w
+        a = function () {
+          var n = e.body.clientWidth || w
           t.style.fontSize = (n / w) * 100 + 'px'
         }
       a()
       e.addEventListener && n.addEventListener(o, a, !1)
     })(window, 750)
   </script>
+  {{ APP }}
+</body>
+<script>
+
+</script>
+
 </html>
