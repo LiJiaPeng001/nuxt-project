@@ -1,18 +1,27 @@
 <template>
   <div class="index-container page flex">
-    <blog-list :list="list" :total="total"></blog-list>
+    <div class="l-list">
+      <blog-list :list="list" :total="total"></blog-list>
+      <my-pagination
+        style="margin-bottom: 40px"
+        :payload.sync="payload"
+        :total="total"
+      ></my-pagination>
+    </div>
     <right-panel :list="cateList"></right-panel>
   </div>
 </template>
 
 <script>
-import blogList from './components/blog-list';
-import rightPanel from './components/right-panel';
+import MyPagination from "@/common/my-pagination";
+import blogList from "./components/blog-list";
+import rightPanel from "./components/right-panel";
 
 export default {
   components: {
     blogList,
     rightPanel,
+    MyPagination,
   },
   props: {
     list: {
@@ -28,6 +37,22 @@ export default {
       default: () => [],
     },
   },
+  data() {
+    const { page = 1, per_page = 12 } = this.$route.query;
+    return {
+      payload: {
+        page: Number(page),
+        per_page: Number(per_page),
+      },
+    };
+  },
+  watch: {
+    "$route.query"() {
+      const { page = 1, per_page = 3 } = this.$route.query;
+      this.payload.page = Number(page);
+      this.payload.per_page = Number(per_page);
+    },
+  },
 };
 </script>
 
@@ -39,6 +64,9 @@ export default {
   .index-container {
     width: 100%;
     align-items: flex-start;
+    .l-list {
+      margin: 0 auto;
+    }
   }
 }
 </style>

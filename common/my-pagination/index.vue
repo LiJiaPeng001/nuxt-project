@@ -19,7 +19,9 @@
           class="page-view"
           :class="{ 'active-view': payload.page == it }"
           @click="onChangeSize(it, $event)"
-        >{{ it }}</div>
+        >
+          {{ it }}
+        </div>
       </router-link>
     </div>
     <!-- 第二栏 -->
@@ -34,7 +36,9 @@
           class="page-view"
           :class="{ 'active-view': payload.page == it }"
           @click="onChangeSize(it, $event)"
-        >{{ it }}</div>
+        >
+          {{ it }}
+        </div>
       </router-link>
     </div>
     <!-- 第三栏 -->
@@ -49,7 +53,9 @@
           class="page-view"
           :class="{ 'active-view': payload.page == it }"
           @click="onChangeSize(it, $event)"
-        >{{ it }}</div>
+        >
+          {{ it }}
+        </div>
       </router-link>
     </div>
     <!-- 下一页 -->
@@ -65,27 +71,30 @@
 
 <script>
 export default {
-  name: 'myPagination',
+  name: "myPagination",
   props: {
     total: {
       type: Number,
-      default: 0
+      default: 0,
     },
     payload: {
       type: Object,
       default: () => ({
         page: 1,
-        per_page: 20
-      })
+        per_page: 20,
+      }),
     },
     prevent: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     nextPage() {
-      let num = this.payload.page == this.totalPage ? this.totalPage : this.payload.page + 1;
+      let num =
+        this.payload.page == this.totalPage
+          ? this.totalPage
+          : this.payload.page + 1;
       return num;
     },
     prevPage() {
@@ -116,23 +125,29 @@ export default {
       if (totalPage < 10) return 0;
       if (totalPage >= 10) {
         if (page >= totalPage - 2)
-          return [totalPage - 4, totalPage - 3, totalPage - 2, totalPage - 1, totalPage];
+          return [
+            totalPage - 4,
+            totalPage - 3,
+            totalPage - 2,
+            totalPage - 1,
+            totalPage,
+          ];
         return [totalPage];
       }
       return [];
-    }
+    },
   },
   methods: {
     changeView(init) {
       let payload = {
-        page: 1
+        page: 1,
       };
       if (init) {
         if (this.payload.page == 1) return;
-        payload.page = this.payload.page -= 1;
+        payload.page = this.payload.page - 1;
       } else {
         if (this.payload.page == this.totalPage || !this.total) return;
-        payload.page = this.payload.page += 1;
+        payload.page = this.payload.page + 1;
       }
       this.onChange(payload);
     },
@@ -143,11 +158,11 @@ export default {
     },
     onChange(payload) {
       payload = { ...this.payload, ...payload };
-      this.$emit('update:payload', payload);
-      this.$emit('change', payload);
+      this.$emit("update:payload", payload);
+      this.$emit("change", payload);
       window.scrollTo(0, 0);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -178,7 +193,7 @@ export default {
   .disabled {
     background-color: #f8f8fa;
     color: #cccccc;
-    pointer-events: none;
+    cursor: no-drop;
   }
   .active-view {
     background-color: #0185f2;
