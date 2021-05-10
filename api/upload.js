@@ -13,3 +13,14 @@ export const uploadToken = async () => {
   }
   return qnToken
 }
+
+export function upload(data) {
+  return request({
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    },
+    url: '/api/common-user/upload',
+    method: 'post',
+    data
+  })
+}

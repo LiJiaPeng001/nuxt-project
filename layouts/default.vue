@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="body">
     <common-head></common-head>
     <div class="nuxt">
@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import CommonHead from '@/common/common-head';
-import CommonFoot from '@/common/common-foot';
-import ToTop from '@/common/to-top';
+import CommonHead from "@/common/common-head";
+import CommonFoot from "@/common/common-foot";
+import ToTop from "@/common/to-top";
 
 export default {
   components: {

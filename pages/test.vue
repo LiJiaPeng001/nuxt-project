@@ -1,28 +1,25 @@
 <template>
   <div class="test">
-    <a-button @click="send">点击发送formData数据</a-button>
+    <button @click="toUpload">点击上传</button>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-import qs from 'qs';
+import * as Api from "@/api/upload";
+import { getFiles, getFileMD5 } from "@/utils/upload";
 
 export default {
   methods: {
-    send() {
-      let data = { name: '李家朋', phone: 13673717028 };
-      axios({
-        url: '/api/koa-blog/cate',
-        method: 'post',
-        data: qs.stringify(data),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        success() {
-          console.log('222');
-        },
-      });
+    async toUpload() {
+      const files = await getFiles();
+      let file = files[0];
+      console.log(file, "file");
+      let md5 = await getFileMD5(file);
+      let formdata = new FormData();
+      formdata.append("file", file);
+      formdata.append("name", md5 + file.type.replace(/image\//gi, "."));
+      let data = await Api.upload(formdata);
+      console.log(data, "upload");
     },
   },
 };
