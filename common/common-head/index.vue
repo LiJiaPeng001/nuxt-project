@@ -13,19 +13,27 @@
           class="tab"
           v-for="it in tabs"
           :key="it.key"
-          :class="{ 'active-tab': $route.name === it.key || ($route.name || '').includes(it.key) }"
+          :class="{
+            'active-tab':
+              $route.name === it.key || ($route.name || '').includes(it.key),
+          }"
           :to="{ name: it.key }"
         >
           {{ it.name }}
         </router-link>
-        <a title="github" class="tab" target="_blank" href="https://github.com/LiJiaPeng001">
+        <a
+          title="github"
+          class="tab"
+          target="_blank"
+          href="https://github.com/LiJiaPeng001"
+        >
           <i class="iconfont icon icon-git"></i>
         </a>
       </div>
       <!-- 搜索 -->
       <a-input-search
         v-show="$route.name === 'index'"
-        :maxLength="20"
+        :max-length="20"
         placeholder="请输入博客标题"
         class="searchInput"
         v-model="payload.title"
@@ -36,14 +44,14 @@
 </template>
 
 <script>
-import { imgUrl } from '@/contants';
+import { imgUrl } from "@/contants";
 
 export default {
   data() {
-    let { title = '' } = this.$route.query;
+    let { title = "" } = this.$route.query;
     return {
       imgUrl,
-      tabs: [{ name: '七牛上传', key: 'upload' }],
+      tabs: [{ name: "测试上传", key: "upload" }],
       payload: {
         title,
       },
