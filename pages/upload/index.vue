@@ -3,7 +3,12 @@
     <div class="upload-box" v-show="images.length">
       <textarea class="textarea" :value="imageText"></textarea>
       <div class="upload-list">
-        <div class="upload-item" @click="preview(i)" v-for="(it, i) in images" :key="i">
+        <div
+          class="upload-item"
+          @click="preview(i)"
+          v-for="(it, i) in images"
+          :key="i"
+        >
           <img class="img cover" :src="it.url" />
         </div>
       </div>
@@ -26,12 +31,12 @@
 </template>
 
 <script>
-import upload, { upload as singleUpload } from '@/utils/upload';
+import upload, { upload as singleUpload } from "@/utils/upload";
 
 export default {
   head() {
     return {
-      meta: [{ name: 'referrer', content: 'no-referrer' }],
+      meta: [{ name: "referrer", content: "no-referrer" }],
     };
   },
   props: {
@@ -49,9 +54,9 @@ export default {
   computed: {
     imageText() {
       return this.images.reduce((all, item) => {
-        all += item.url + '\n';
+        all += item.url + "\n";
         return all;
-      }, '');
+      }, "");
     },
   },
   watch: {
@@ -59,7 +64,23 @@ export default {
       this.images = [...this.value];
     },
   },
+  mounted() {
+    console.log(this.$message);
+    window.addEventListener("paste", this.onPaste);
+  },
+  beforeDestroy() {
+    window.removeEventListener("paste", this.onPaste);
+  },
   methods: {
+    async onPaste(e) {
+      const { files = [] } = e.clipboardData;
+      for (let index = 0; index < files.length; index++) {
+        const item = files[index];
+        if (!item.type.includes("image")) continue;
+        const data = await singleUpload({ file: item });
+        this.images.push(data);
+      }
+    },
     enter() {
       this.loading = true;
     },

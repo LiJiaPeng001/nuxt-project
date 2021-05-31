@@ -74,8 +74,12 @@ export async function startUpload(options = { limit: 1 }) {
   files = [...files].slice(0, options.limit);
   for (let index = 0; index < files.length; index++) {
     const item = files[index];
-    const data = await upload({ file: item });
-    imageInfo.push(data);
+    try {
+      const data = await upload({ file: item });
+      imageInfo.push(data);
+    } catch (error) {
+      continue;
+    }
   }
   $loading.hide();
   return imageInfo;
